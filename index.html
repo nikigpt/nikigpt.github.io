@@ -1,0 +1,190 @@
+<div>
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="wrapper" id="wrapper">   
+      <div class="ques" id="question1"> 
+        <p>var counter = 0;counter++; 
+          ++counter; alert( counter );
+          What will alert this and why? 
+        </p>
+        <p class="ans">Reason: First tym it gives me alert saying counter is 0 and then increase the counter to 1 because have used counter++ and then while alerting second time it increase counter as we used ++counter and then display value 2</p>
+      </p>
+    </div>
+    <div class="ques" id="question2">
+      <p>var n = 2; n *= 3 + 5; alert( n );
+        What will alert this and why?
+      </p>
+      <p class="ans">Reason: It first adds 3+5 and then multiply it with value of n (*= assignment operator which multiplies with variable)</p>
+    </div>
+    <div class="ques" id="question3">
+      <p>What are the final values of all variables a, b, c and d after the code below?
+        var a = 1, b = 1; 
+        var c = ++a; 
+      var d = b++;</p>
+      <p class="ans" id="values"></p>
+    </div>
+    <div class="ques" id="question4">
+      <p>What are the values of a and x after the code below?
+      var a = 2; var x = 1 + (a *= 2);</p>
+      <p class="ans" id="voq4"></p>
+
+    </div>
+    <div class="ques" id="question5">
+      <p>Find greatest among 4 numbers</p>
+      <p class="ans" id="maxvalue">Greatest value is : </p>
+    </div>
+    <div class="ques" id="question6">
+      <p>Rewrite this if using the ternary operator '?':
+        if (a + b < 4) { result = 'Below'; } else { result = 'Over'; }
+      </p>
+      <p class="ans">Answer : (a + b < 4) ? "result = 'Below';":"result = 'Over';";</p>
+    </div>
+    <div class="ques" id="question7">
+      <p>Rewrite following to switch
+      var a = +prompt('a?', ''); if (a == 0) { alert( 0 ); } if (a == 1) { alert( 1 ); } if (a == 2 || a == 3) { alert( '2,3' ); }</p>
+      <p class="ans">Answer : var a = +prompt('a?', '');
+        switch (a) {
+        case 0:
+        a = "0";
+        break;
+        case 1:
+        a = "1";
+        break;
+        case 2:
+        case 3:
+        a = "2,3";
+        break;
+        default:
+        a = "Unknown number";
+      }
+    </p>
+  </div>
+  <div class="ques" id="question8">
+    <div class="checkage">
+      <p>Please Enter your age in below textbox.</p>
+      <form action="#" >
+        <input type="text" value="" placeholder="Enter Age" id="age">
+        <button class="btn" onclick="checkAge()">Submit</button>
+
+      </form>
+      <p class="ans" id="calcage"></p>
+    </div>
+  </div>
+  <div class="ques" id="question9">
+
+    <div class="day-block">
+      <p>Click the button to display what day it is today.</p>
+
+      <button class="btn" onclick="checkDay()">Check Day</button>
+
+      <p class="ans" id="day"></p>
+    </div>
+  </div>
+  
+</div>
+<script>
+  var counter = 0;
+  alert('counter++ is used and then value is:' + counter++);
+  alert('++counter is used and then value is:' + ++counter);
+
+  var n = 2;
+  n *= 3+5;
+  alert('value of n after adding 3+5 and then multiplying with value of n' + n);
+
+  var a = 1, b = 1; 
+  var c = ++a; 
+  var d = b++;
+  document.getElementById('values').append("value of a: " + a + " value of b: " +b+ "value of c: " + c + " value of d: " + d);
+
+  var a = 2; var x = 1 + (a *= 2);
+  document.getElementById('voq4').append("value of a: " + a + " value of x: " +x);
+
+  voq4
+  function checkAge() {
+    var age = document.getElementById("age").value;
+    if (age > 0 && age < 13) {
+
+      document.getElementById("calcage").innerHTML = "You are very young";
+    }else if (age > 13 && age < 30){
+      document.getElementById("calcage").innerHTML = "You are in your teens";
+    }else{
+      document.getElementById("calcage").innerHTML = "You are in too old";
+
+    }
+  }
+  
+  function checkDay() {
+    var day;
+    switch (new Date().getDay()) {
+      case 1:
+      day = "Monday";
+      break;
+      case 2:
+      day = "Tuesday";
+      break;
+      case 3:
+      day = "Wednesday";
+      break;
+      case 4:
+      day = "Thursday";
+      break;
+      case 5:
+      day = "Friday";
+      break;
+      case 0:
+      case 6:
+      day = "Weekend";
+      break;
+      default:
+      day = "Unknown Day";
+    }
+    document.getElementById("day").innerHTML = "Today is " + day;
+  }
+
+  var currentTime = new Date().getHours();
+  
+  if (7 <= currentTime && currentTime < 16) {
+      document.body.style.background = "#f8e8a5";
+  }
+  else if(16 <= currentTime && currentTime < 20){
+      document.body.style.background = "#c3e3f0";
+  }else{
+      document.body.style.background = "#000";
+  }
+  
+  function switchCheck(){
+    var a  = +prompt('a?', '');
+    switch (a) {
+      case 0:
+      a = "0";
+      break;
+      case 1:
+      a = "1";
+      break;
+      case 2:
+      case 3:
+      a = "2,3";
+      break;
+      default:
+      a = "Unknown number";
+    }
+  }
+  
+  var max = 0; 
+  for(var i=0;i<4;i++){ 
+    var val = parseInt(prompt("Enter a number"));
+    max = max > val ? max : val; 
+  } 
+  document.getElementById("maxvalue").append(max) ;
+  
+  
+</script>     
+</body>
+</html>
+</div>
