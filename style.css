@@ -1,0 +1,18 @@
+*{margin:0;padding:0}
+a{outline:none;text-decoration:none}
+img{outline:none;border:0 none}
+
+ol, ul {list-style: none;}
+.wrapper{max-width: 600px;margin: 20px auto 0;text-align: center;}
+.black{background-color: #000}
+.gold {background-color:#c9ba93}
+.blue{background-color:#e2eaff}
+.rosegold{background-color: #b76e79}
+
+.tab-block{overflow: hidden;margin: 25px 0}
+.tab-block li{float: left;width: 24.2%;margin-right: 1%;text-align: center;}
+.tab-block li a{height: 50px;line-height: 50px;display: block;color: #fff;text-transform: uppercase;font-size: 25px;}
+.tab-block li:last-child{margin-right: 0;}
+.tab-block li p{font-size: 20px;font-family: arial;line-height: 30px;height: 30px}
+.img-responsive{width: 100%;height: auto;}
+.img-block{max-width: 165px;margin: 0 auto}
