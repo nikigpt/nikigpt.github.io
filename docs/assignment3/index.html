@@ -4,206 +4,150 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="docs/assignment4/style.css">
 </head>
+
 <body>
+  <header class="header" id="header"><div class="logo">Assigment 4</div>
+    <div id="nav-icon" class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+
+  </div>
+  <nav class="menu" id="menu">
+    <ul>
+      <li class="menu-title"><a href="#">Heading1</a>
+        <ul class="nav-sub1">
+          <li><a href="#">sub heading</a>
+            <ul class="nav-sub2">
+              <li><a href="#">sub head</a></li>
+              <li><a href="#">sub head</a></li>
+              <li><a href="#">sub head</a></li>
+
+            </ul>
+          </li>
+          <li><a href="#">sub heading1</a></li>
+          <li><a href="#">sub heading2</a></li>
+
+        </ul>
+        </li>
+        <li class="menu-title"><a href="#">Heading2</a></li>
+        <li class="menu-title"><a href="#">Heading3</a>
+        <ul class="nav-sub1">
+            <li>sub heading
+              <ul class="nav-sub2">
+                <li><a href="#">sub head</a></li>
+                <li><a href="#">sub head</a></li>
+                <li><a href="#">sub head</a></li>
+                
+              </ul>
+            </li>
+            <li><a href="#">sub heading1</a></li>
+            <li><a href="#">sub heading2</a></li>
+
+          </ul></li>
+
+
+    </ul>
+  </nav>
+  </header>
   <div class="wrapper" id="wrapper">
     <div class="ques">
-      <p> 1. What is the difference between following 2 functions if any? 
-          function checkAge(age) {
-                if (age > 18) {
-                return true;
-              } else {
-              return confirm('Did parents allow you?');
-            }
-          }
-
-          function checkAge(age) {
-          if (age > 18) {
-          return true;
-          }
-          return confirm('Did parents allow you?');
-          }
-      </p> 
-      <p class="ans">Rewritten function</p>
-      <p class="ans">
-        function checkAge(age){
-          if (age > 18) {
-              return true;
-            } else {
-            return confirm('Did parents allow you?');
-          }
-        }
-        checkAge(30);
-      </p>
-      <p class="ans">
-        function checkAge(age) {
-        if (age > 18) {
-        return true;
-        }
-        return confirm('Did parents allow you?');
-        }
-      </p>
-      <p class="ans">The above 1st function will will check if age is greater than 18 then it will return true, else it will return Did parents allow you?</br>2nd Function will default return Did parents allow you? and if age is greater than 18 it will return true.</p>
-          
+      <p> 1. WAF: To check if palindrome
+      </p>           
     </div>   
-    <div class="ques" id="question1"> 
-      <p> 2.  Rewrite above function using ternary operator</br>
-        function checkAge(age) {
-          if (age > 18) {
-          return true;
-          }
-          return confirm('Did parents allow you?');
-        }
-      </p>
-      <div class="viewans btn" onclick=" checkAge(30);">Answer</div>
-      <p class="ans" id="showFun" ></p>
-
-    </div>
-    <div class="ques" id="question2"> 
-      <p> 3. WAF to find min value from 2 numbers using ternary operators</p>
-      <div class="viewans btn" onclick="minValue()">Find min value</div>
-      <p class="ans" id="minVal">Min Value: </p>
-    </div>
-    <div class="ques" id="question3">
-      <p> 4. WAF to find prime numbers from 1-100</p> 
-      <div class="btn" onclick="primeNumber()">Find Prime</div>
-      <p class="ans" id="primeno">Prime Numbers: </p>
-    </div>
-    <div class="ques">
-      <p>5. Implement IIFE</p>
-        <p class="ans">  
-          var text = "Hello World";
-          (function (innerFoo) {
-             alert(innerFoo);
-          })(text);
-        </p>
-    </div>
-    <div class="ques">
-      <p>  6. Demonstrate difference between function declaration and expression</p>
-      <p class="ans">
-        function multi(num1,num2){
-          return num1 * num2;
-        } multi(20,6)"</br>
-        In the above function num1 and num2 is parameter for function multi.this means it will be just act as placeholder everwhere num1 and num2 is passed until it is passed as an argument.When funtion is invoked with arguments ie:[ multi(20,6) ] .Now num1 and num2 will act as a variable for the passed arguments
-      </p>    
-    </div>
-    <div class="ques">
-      <p> 7. WAF to multi 2/multiple numbers. (use function parameters/arguments)</p>
-      <div class="btn" onclick="multiple(20,6)">Multiple</div>
-      <p class="ans" id="number"></p>
-    </div>
-    <div class="ques">
-      <p> 8. Implement previous assignments (Take any 5 examples.) using functions e.g.: get todays day, change bg, check age, etc. try to use pure functions.</p>
-      <div class="btn btnfloat" onclick="operations()">Operations</div>
-      <div class="btn btnfloat" onclick="checkTeens()">Check Teens</div>
-      <div class="btn btnfloat" onclick="checkDay()">Check Day</div>
-      <div class="btn btnfloat" onclick="currentTime()">Current Time</div>
-      <div class="btn btnfloat" onclick="valueofax()">Value of a & x</div>
-      <p class="ans" id="number"></p>
+   <div class="ques">
+      <p> 2.WAF: To generate fibonacci series upto user entered number eg: if user enters 6.  output: 1 1 2 3 5 8 
+      </p> 
+       <div class="viewans btn" onclick=" fibonacci();">Answer</div>
+      <p class="ans" id="series" ></p>          
     </div>
   </div>
+
+  <div class="ques">
+    <p>6. implement tab switch functionality / name of tab and content should come from an object</p>
+    <div class="ans-block">
+      <p id="tab-result"></p> 
+    </div>
+  <ul id="tab" class="tab-block">
+    <li><a href="#" data="1" class="btn">Tab1</a></li>
+    <li><a href="#" data="2" class="btn">Tab2</a></li></li>  
+  </ul>
+
+  </div>
 <script>
-  
-  function checkAge(age){
-    return (age > 18) ? true : confirm('Did parents allow you?');
-    document.getElementById("showFun").append(age); 
 
-
+  document.getElementById('nav-icon').addEventListener('click', menudrop);
+  function menudrop(){
+  document.getElementById('menu').style.display = "block";
+  }
+  var tabparent = document.getElementById('tab');
+  var tab = tabparent.getElementsByTagName("a");
+  var i;
+  for (i = 0; i < tab.length; ++i) {
+  var tabclick = tab[i];
+  tabclick.addEventListener('click', changeImage) ;
+  }
+  function changeImage(e) {
+    e.preventDefault();
+    var data = this.getAttribute("data");
+      document.getElementById("tab-result").innerHTML= "This is Tab"+data; 
+    
   }
 
-  function minValue(){
+window.onscroll = function() {stickyheader()};
+
+var header = document.getElementById("header");
+var sticky = 200;
+function stickyheader() {
+  if (window.pageYOffset >= sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}  
+
+ function palindrome(str) {
+  var re = /[\W_]/g;
+  var lowRegStr = str.toLowerCase().replace(re, '');
+  var reverseStr = lowRegStr.split('').reverse().join(''); 
+  console.log(reverseStr === lowRegStr);
+}
+palindrome("A man");
+function fibonacci(){
+  var var1 = 0;
+    var var2 = 1;
+    var var3;
+ 
+    var num = prompt("Enter the limit to generate fibonacci no",0);
+ 
+    document.getElementById("series").append(var1+","); 
+    document.getElementById("series").append(var2+","); 
+ 
+    for(var i=3; i <= num;i++)
+    {
+      var3 = var1 + var2;
+      var1 = var2;
+      var2 = var3;
+      document.getElementById("series").append(var3+","); 
+    }
+}
+function minValue(){
     var min; 
-    for(var i=0;i<2;i++){ 
+    var max
+    for(var i=0;i<5;i++){ 
       var val = parseInt(prompt("Enter a number"));
       min = min < val ? min : val; 
+      max = max > val ? max : val; 
+
     } 
-    document.getElementById("minVal").append(min); 
+    console.log(min);
+    console.log(max);
 
   }
-  var text = "Hello World";
+minValue();
 
-  (function (innerFoo) {
-     alert(innerFoo);
-  })(text);
-
-  function primeNumber(){
-    var array = new Array(100);
-
-    for (var i=2 ; i<=array.length-1; i++){
-
-      if((i%2===0) || (i%3===0))
-        continue;
-      document.getElementById("primeno").append( i+ " , " ); 
-
-    }
-  }
-
-  function multiple(num1,num2){
-    var multi = num1 * num2;
-    document.getElementById("number").append(multi); 
-
-  }
-  function operations(){
-     var n = 2;
-    n *= 3+5;
-    alert('value of n after adding 3+5 and then multiplying with value of n' + n);
-  }
-  function checkTeens() {
-    var age = parseInt(prompt("Enter a number"));
-    if (age > 0 && age < 13) {
-
-      alert("You are very young");
-    }else if (age > 13 && age < 30){
-      alert("You are in your teens");
-    }else{
-      alert("You are in too old");
-
-    }
-  }
-  function checkDay() {
-    var day;
-    switch (new Date().getDay()) {
-      case 1:
-      day = "Monday";
-      break;
-      case 2:
-      day = "Tuesday";
-      break;
-      case 3:
-      day = "Wednesday";
-      break;
-      case 4:
-      day = "Thursday";
-      break;
-      case 5:
-      day = "Friday";
-      break;
-      case 0:
-      case 6:
-      day = "Weekend";
-      break;
-      default:
-      day = "Unknown Day";
-    }
-    alert(day);
-  }
-  function currentTime(){
-     var currentTime = new Date().getHours();
-  
-    if (7 <= currentTime && currentTime < 16) {
-        document.body.style.background = "#f8e8a5";
-    }
-    else if(16 <= currentTime && currentTime < 20){
-        document.body.style.background = "#c3e3f0";
-    }else{
-        document.body.style.background = "#000";
-    }
-  }
-  function valueofax(){
-    var a = 2; var x = 1 + (a *= 2);
-    alert("value of a: " + a + " value of x: " +x)
-  }
 </script>     
 </body>
 </html>
