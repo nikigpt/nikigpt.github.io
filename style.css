@@ -10,7 +10,7 @@ p.ans{font-size: 20px}
 .btn:hover{color: #001c4f;background:#fff;border-color: #001c4f}
 #age{padding: 0 10px;height: 50px;}
 .btnfloat{float: left;width: 20%;margin: 0 2% 20px;}
-header{height: 90px;background: #000;color: #fff;line-height: 90px;font-size: 30px;text-transform: uppercase;position: relative;max-width: 960px;text-align: left;}
+header{height: 90px;background: #000;color: #fff;line-height: 90px;font-size: 30px;text-transform: uppercase;position: relative;text-align: left;}
   .logo{float: left;}
   ul{margin:0;padding:0;}
   ul li{list-style: none;}
