@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+  <link rel="stylesheet" href="docs/assignment4/style.css">
+</head>
+
+<body>
+  <header class="header" id="header"><div class="logo">Assigment 4</div>
+    <div id="nav-icon" class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+
+  </div>
+  <nav class="menu" id="menu">
+    <ul>
+      <li class="menu-title"><a href="#">Heading1</a>
+        <ul class="nav-sub1">
+          <li><a href="#">sub heading</a>
+            <ul class="nav-sub2">
+              <li><a href="#">sub head</a></li>
+              <li><a href="#">sub head</a></li>
+              <li><a href="#">sub head</a></li>
+
+            </ul>
+          </li>
+          <li><a href="#">sub heading1</a></li>
+          <li><a href="#">sub heading2</a></li>
+
+        </ul>
+        </li>
+        <li class="menu-title"><a href="#">Heading2</a></li>
+        <li class="menu-title"><a href="#">Heading3</a>
+        <ul class="nav-sub1">
+            <li>sub heading
+              <ul class="nav-sub2">
+                <li><a href="#">sub head</a></li>
+                <li><a href="#">sub head</a></li>
+                <li><a href="#">sub head</a></li>
+                
+              </ul>
+            </li>
+            <li><a href="#">sub heading1</a></li>
+            <li><a href="#">sub heading2</a></li>
+
+          </ul></li>
+
+
+    </ul>
+  </nav>
+  </header>
+  <div class="wrapper" id="wrapper">
+    <div class="ques">
+      <p> 1. WAF: To check if palindrome
+      </p>           
+    </div>   
+   <div class="ques">
+      <p> 2.WAF: To generate fibonacci series upto user entered number eg: if user enters 6.  output: 1 1 2 3 5 8 
+      </p> 
+       <div class="viewans btn" onclick=" fibonacci();">Answer</div>
+      <p class="ans" id="series" ></p>          
+    </div>
+  </div>
+
+  <div class="ques">
+    <p>6. implement tab switch functionality / name of tab and content should come from an object</p>
+    <div class="ans-block">
+      <p id="tab-result"></p> 
+    </div>
+  <ul id="tab" class="tab-block">
+    <li><a href="#" data="1" class="btn"><p>Tab1</p></a></li>
+    <li><a href="#" data="2" class="btn"><p>Tab2</p></a></li></li>  
+  </ul>
+
+  </div>
+<script>
+
+  document.getElementById('nav-icon').addEventListener('click', menudrop);
+  function menudrop(){
+  document.getElementById('menu').style.display = "block";
+  }
+  var tabparent = document.getElementById('tab');
+  var tab = tabparent.getElementsByTagName("a");
+  var i;
+  for (i = 0; i < tab.length; ++i) {
+  var tabclick = tab[i];
+  tabclick.addEventListener('click', changeImage) ;
+  }
+  function changeImage(e) {
+    e.preventDefault();
+    var data = this.getAttribute("data");
+      document.getElementById("tab-result").innerHTML= "This is Tab"+data; 
+    
+  }
+
+window.onscroll = function() {stickyheader()};
+
+var header = document.getElementById("header");
+var sticky = 200;
+function stickyheader() {
+  if (window.pageYOffset >= sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}  
+
+ function palindrome(str) {
+  var re = /[\W_]/g;
+  var lowRegStr = str.toLowerCase().replace(re, '');
+  var reverseStr = lowRegStr.split('').reverse().join(''); 
+  console.log(reverseStr === lowRegStr);
+}
+palindrome("A man");
+function fibonacci(){
+  var var1 = 0;
+    var var2 = 1;
+    var var3;
+ 
+    var num = prompt("Enter the limit to generate fibonacci no",0);
+ 
+    document.getElementById("series").append(var1+","); 
+    document.getElementById("series").append(var2+","); 
+ 
+    for(var i=3; i <= num;i++)
+    {
+      var3 = var1 + var2;
+      var1 = var2;
+      var2 = var3;
+      document.getElementById("series").append(var3+","); 
+    }
+}
+function minValue(){
+    var min; 
+    var max
+    for(var i=0;i<5;i++){ 
+      var val = parseInt(prompt("Enter a number"));
+      min = min < val ? min : val; 
+      max = max > val ? max : val; 
+
+    } 
+    console.log(min);
+    console.log(max);
+
+  }
+minValue();
+
+</script>     
+</body>
+</html>
+
