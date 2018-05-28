@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+		<form action="" type="post">
+			<input type="email" value="" name="email" placeholder="Email" id="emailSg">
+			<input type="password" value="" name="password" placeholder="Password" id="passwordSg">
+			<button onclick="signUp()">Signup	</button>
+		</form>
+		<form action="" type="post">
+			<input type="email" value="" name="email" placeholder="Email" id="emailLg">
+			<input type="password" value="" name="password" placeholder="Password" id="passwordLg">
+			<button onclick="signIn();">LogIn	</button>
+			
+		</form>
+		<div class="wrapper">
+		<div id="demo" class="clearfix">
+		</div>
+		<div id="cart-wrap" class="clearfix">
+			<div class="cart-title">Cart</div>
+			<div id="cart-box"></div>
+			<div id="subtotal"></div>
+			<button id="check-out" class="checkout">Checkout</button>
+		</div>
+	</div>
+	
+		<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-database.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/5.0.3/firebase.js"></script>
+		<script>
+		  // Initialize Firebase
+		  var config = {
+		    apiKey: "AIzaSyBhHDLrWzsXvGAXnDb-ClLN97C_A4hNTJ4",
+		    authDomain: "food-menu-app-cf5f2.firebaseapp.com",
+		    databaseURL: "https://food-menu-app-cf5f2.firebaseio.com",
+		    projectId: "food-menu-app-cf5f2",
+		    storageBucket: "food-menu-app-cf5f2.appspot.com",
+		    messagingSenderId: "326618778484"
+		  };
+		  firebase.initializeApp(config);
+		</script>
+		<script src="index.js"></script> 
+	</body>
+</html>
