@@ -1,0 +1,26 @@
+[debug] [2018-05-02T09:05:27.311Z] ----------------------------------------------------------------------
+[debug] [2018-05-02T09:05:27.313Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\namrata.s\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase init
+[debug] [2018-05-02T09:05:27.314Z] CLI Version:   3.18.4
+[debug] [2018-05-02T09:05:27.314Z] Platform:      win32
+[debug] [2018-05-02T09:05:27.314Z] Node Version:  v6.11.3
+[debug] [2018-05-02T09:05:27.314Z] Time:          Wed May 02 2018 14:35:27 GMT+0530 (India Standard Time)
+[debug] [2018-05-02T09:05:27.314Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-05-02T09:05:27.327Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase"]
+[debug] [2018-05-02T09:05:27.328Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\xampp\htdocs\foodmenu
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+  * You are initializing in an existing Firebase project directory
+
