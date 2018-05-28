@@ -1,0 +1,151 @@
+html
+{
+    font-size: 100%;
+}
+body
+{
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5;
+}
+input
+{
+    outline: none;
+}
+.clearfix:after
+{
+    display: block;
+    clear: both;
+    content: '';
+}
+.wrapper
+{
+    max-width: 600px;
+    margin: 0 auto;
+}
+#demo
+{
+    max-width: 600px;
+    margin: 0 auto;
+}
+img
+{
+    max-width: 100%;
+}
+.img-wrap
+{
+    overflow: hidden;
+    width: 277px;
+    max-height: 169px;
+    border: 1px solid #ccc;
+}
+.wrap
+{
+    float: left;
+    width: 50%;
+    margin: 20px 0;
+}
+.add-order
+{
+    display: block;
+    float: left;
+    width: 35%;
+    margin: 10px 0;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    border: none;
+    background: #d31c1c;
+}
+.title
+{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #000;
+}
+.price
+{
+    font-size: 1rem;
+}
+#cart-wrap
+{
+    position: absolute;
+    top: 0;
+    right: 20px;
+    width: 390px;
+    height: 290px;
+
+}
+.cart-name
+{
+    float: left;
+    width: 43%;
+}
+.cart-price
+{
+    float: left;
+    width: 25%;
+    text-align: right;
+}
+.cart-title
+{
+    font-size: 2em;
+    color: #000;
+}
+#items-wrap
+{
+    font-size: 1rem;
+}
+.amount
+{
+    display: inline-block;
+    float: right;
+    padding-left: 99px;
+    text-align: right;
+}
+#subtotal
+{
+    font-weight: bold;
+}
+.quantity-wrap
+{
+    margin-right: 20px;
+    text-align: center;
+}
+.quantity
+{
+    display: inline-block;
+    float: left;
+    width: 28%;
+    margin: 5px 0;
+}
+
+
+.count
+{
+    font-size: 14px;
+    float: left;
+    width: 74%;
+    border: 1px solid #ccc;
+    background: none;
+    padding: 5px;
+    box-sizing: border-box;
+}
+.cart-parent{
+    display: block;
+    width: 100%;
+    height: 50px;
+}
+.checkout{
+    background: #5fb172;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    margin: 40px 0;
+    border: none;
+    display: none;
+    width: 107px;
+    outline: none;
+    cursor: pointer;
+}

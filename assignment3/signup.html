@@ -1,0 +1,55 @@
+<form action="" type="post">
+	<input type="email" value="" name="email" placeholder="Email" id="emailSg">
+	<input type="password" value="" name="password" placeholder="Password" id="passwordSg">
+	<input type="submit" placeholder="submit" id="signUp">
+</form>
+<form action="">
+	<input type="email" value="" name="email" placeholder="Email" id="emailLg">
+	<input type="password" value="" name="password" placeholder="Password" id="passwordLg">
+	<input type="submit" placeholder="submit" id="signIn">
+</form>
+<script>	
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    // User is signed in.
+  } else {
+    // No user is signed in.
+  }
+});
+//   var signUp =document.getElementById("signUp");
+
+//   signUp.addEventListener('click', function(){
+//   signUp();
+// })
+//   function signUp(){
+//     var email =document.getElementById("emailSg").value;
+//     var password =document.getElementById("passwordSg").value;
+
+//     firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+//   // Handle Errors here.
+//   var errorCode = error.code;
+//   var errorMessage = error.message;
+//   // ...
+// });
+//   }
+    
+   function signIn(){
+    var email =document.getElementById("emailLg").value;
+    var password =document.getElementById("passwordLg").value;
+
+    firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+  // Handle Errors here.
+  var errorCode = error.code;
+  var errorMessage = error.message;
+
+  // ...
+});
+  }
+
+
+  firebase.auth().signOut().then(function() {
+  // Sign-out successful.
+}).catch(function(error) {
+  // An error happened.
+});
+  </script>
